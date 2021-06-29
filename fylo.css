@@ -226,7 +226,7 @@ main:before {
 
 .color-green-underscore::after {
   content: "";
-  background: url(icon-arrow.svg);
+  background: url(fylo-col/icon-arrow.svg);
   background-position: center;
   background-size: contain;
   display: inline-block;
