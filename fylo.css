@@ -459,7 +459,9 @@ svg + svg {
   .section-2__container {
     display: flex;
     justify-content: space-between;
+    padding: 4rem 1rem 4rem;
   }
+
   .section-2__text-container {
     width: 45%;
     max-width: 500px;
@@ -479,6 +481,13 @@ svg + svg {
     grid-area: button;
     font-size: 0.8rem;
   }
+  footer {
+    padding-top: 9rem;
+    padding-bottom: 4rem;
+    background: var(--Very-Dark-Blue);
+    text-align: left;
+    color: white;
+  }
   .footers__wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -488,12 +497,22 @@ svg + svg {
   }
   .fylo-contact {
     display: initial;
+    align-self: start;
+    position: relative;
+    top: -3.3rem;
   }
   .primary-list-cont,
   .secondary-list-cont,
   .ico-icons-cont {
     margin: 0;
     justify-self: center;
+  }
+  .primary-list-cont a:hover,
+  .secondary-list-cont a:hover {
+    color: var(--Desaturated-Blue);
+  }
+  .ico-icons-cont svg {
+    color: var(--Desaturated-Blue);
   }
   .frontend-mentor {
     grid-column: 2 / 4;
