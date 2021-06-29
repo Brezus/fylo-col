@@ -250,7 +250,7 @@ main:before {
 }
 .review__blockquote::before {
   content: "";
-  background: url(\icon-quotes.svg);
+  background: url(/icon-phone.svg);
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
@@ -274,7 +274,7 @@ main:before {
 .profile::before {
   content: "";
   position: absolute;
-  background: url(\avatar-testimonial.jpg);
+  background: url(/images/avatar-testimonial.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
