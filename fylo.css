@@ -274,7 +274,7 @@ main:before {
 .profile::before {
   content: "";
   position: absolute;
-  background: url(fylo-col/images/avatar-testimonial.jpg);
+  background: url(images/avatar-testimonial.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
