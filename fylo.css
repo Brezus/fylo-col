@@ -102,12 +102,21 @@ select {
 .btn {
   border: none;
 }
+.dp-inline {
+  display: inline-block;
+  max-width: 200px;
+}
 
 /* header start */
 header {
   display: grid;
   grid-gap: 5rem;
   padding-bottom: 9rem;
+}
+.primary-list-cont a,
+.secondary-list-cont a {
+  text-decoration: none;
+  color: white;
 }
 .nav-container {
   display: flex;
@@ -124,7 +133,7 @@ header {
   font-weight: var(--ff-weight-s);
   font-size: 0.8rem;
 }
-.nav__list-item + .nav__list-item {
+col .nav__list-item + .nav__list-item {
   margin-left: 1.5em;
 }
 .nav__list-link {
@@ -173,7 +182,7 @@ input[type="email"]:focus {
 .blue-colo-btn {
   background-color: var(--Bright-Blue);
   color: var(--Light-Grayish-Blue);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: var(--ff-other);
   font-weight: var(--ff-weight-l);
   border-radius: 3px;
@@ -379,6 +388,7 @@ svg + svg {
   left: -2.8rem;
   top: 0.3rem;
 }
+
 @media screen and (min-width: 700px) {
   body {
     text-align: left;
@@ -387,6 +397,12 @@ svg + svg {
     width: 90%;
     max-width: 1440px;
     margin: 0 auto;
+  }
+  .nav-container {
+    margin-top: 2rem;
+  }
+  .nav__list-item {
+    margin-left: 1rem;
   }
   .header-content-container {
     display: flex;
@@ -400,10 +416,6 @@ svg + svg {
   .header-fig {
     width: 48%;
   }
-  /* .header-content-container img {
-    width: 100%;
-  } */
-
   .img-width {
     width: 100%;
     margin: 0 auto;
@@ -427,17 +439,14 @@ svg + svg {
   .section-1 {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
-  /* .section-1 {
-    border: 2px solid rgb(165, 45, 45);
-  }
-  .section-1__text-container {
-    border: 2px solid black;
-  } */
   .img-container {
     margin: auto;
+    width: 48%;
   }
   .section-1__text-container {
+    width: 48%;
   }
   .section-1__text-container h2 {
     text-align: left;
@@ -445,5 +454,49 @@ svg + svg {
   .review {
     margin-left: 0;
     margin-bottom: 5rem;
+    max-width: 400px;
+  }
+  .section-2__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .section-2__text-container {
+    width: 45%;
+    max-width: 500px;
+  }
+  .section-2__form {
+    display: grid;
+    grid-template-rows: 60px 60px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "email  email"
+      "button .....";
+  }
+  .section-2__form input[type="email"] {
+    grid-area: email;
+  }
+  .section-2__form button {
+    grid-area: button;
+    font-size: 0.8rem;
+  }
+  .footers__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "fylo primary secondary icons";
+    grid-template-rows: auto auto;
+    grid-row-gap: 3rem;
+  }
+  .fylo-contact {
+    display: initial;
+  }
+  .primary-list-cont,
+  .secondary-list-cont,
+  .ico-icons-cont {
+    margin: 0;
+    justify-self: center;
+  }
+  .frontend-mentor {
+    grid-column: 2 / 4;
+    grid-row: 2;
   }
 }
