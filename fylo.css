@@ -226,7 +226,7 @@ main:before {
 
 .color-green-underscore::after {
   content: "";
-  background: url(\icon-arrow.svg);
+  background: url(icon-arrow.svg);
   background-position: center;
   background-size: contain;
   display: inline-block;
@@ -250,7 +250,7 @@ main:before {
 }
 .review__blockquote::before {
   content: "";
-  background: url(/icon-phone.svg);
+  background: url(icon-quotes.svg);
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
@@ -274,7 +274,7 @@ main:before {
 .profile::before {
   content: "";
   position: absolute;
-  background: url(/images/avatar-testimonial.jpg);
+  background: url(avatar-testimonial.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
