@@ -330,7 +330,7 @@ footer {
   grid-row-gap: 0.8rem;
   opacity: var(--mediumopacity);
 }
-width ul {
+.width ul {
   padding-left: 0;
   list-style: none;
   opacity: var(--mediumopacity);
