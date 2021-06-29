@@ -95,6 +95,7 @@ select {
 }
 .width {
   width: 85%;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -177,6 +178,7 @@ input[type="email"]:focus {
   font-weight: var(--ff-weight-l);
   border-radius: 3px;
   box-shadow: 0px 4px 10px var(--Light-Gray);
+  padding: 0.7rem;
 }
 
 /* main start  */
@@ -200,7 +202,7 @@ main:before {
   background-repeat: no-repeat;
   z-index: -4;
 }
-.section-1 {
+header .section-1 {
   display: flex;
   flex-direction: column-reverse;
 }
@@ -214,6 +216,7 @@ main:before {
 .section-1__paragraph-cont h2 {
   text-align: center;
 }
+
 .color-green-underscore {
   color: var(--Moderate-Cyan);
   text-decoration: none;
@@ -327,7 +330,7 @@ footer {
   grid-row-gap: 0.8rem;
   opacity: var(--mediumopacity);
 }
-ul {
+width ul {
   padding-left: 0;
   list-style: none;
   opacity: var(--mediumopacity);
@@ -349,4 +352,98 @@ ul {
 }
 svg + svg {
   margin-left: 1rem;
+}
+.phone,
+.mail {
+  position: relative;
+  left: 2.8rem;
+}
+.phone::before {
+  content: "";
+  background-image: url(images/icon-phone.svg);
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: -2.8rem;
+  top: 0.3rem;
+}
+.mail::before {
+  content: "";
+  background-image: url(images/icon-email.svg);
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -2.8rem;
+  top: 0.3rem;
+}
+@media screen and (min-width: 700px) {
+  body {
+    text-align: left;
+  }
+  .width {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .header-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--Very-Dark-Blue);
+  }
+  .header-text-form {
+    width: 48%;
+  }
+  .header-fig {
+    width: 48%;
+  }
+  /* .header-content-container img {
+    width: 100%;
+  } */
+
+  .img-width {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .header__form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  main {
+    padding-top: 3rem;
+    background-color: var(--Light-Grayish-Blue);
+    position: relative;
+    color: var(--Very-Dark-Blue);
+  }
+  main:before {
+    background-image: url(images/bg-curve-desktop.svg);
+  }
+  .section-1 {
+    display: flex;
+    flex-direction: row;
+  }
+  /* .section-1 {
+    border: 2px solid rgb(165, 45, 45);
+  }
+  .section-1__text-container {
+    border: 2px solid black;
+  } */
+  .img-container {
+    margin: auto;
+  }
+  .section-1__text-container {
+  }
+  .section-1__text-container h2 {
+    text-align: left;
+  }
+  .review {
+    margin-left: 0;
+    margin-bottom: 5rem;
+  }
 }
