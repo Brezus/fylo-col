@@ -154,6 +154,8 @@ col .nav__list-item + .nav__list-item {
   width: 85%;
   margin: 0 auto;
 }
+/* extra form styling */
+
 .header__form {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -177,7 +179,7 @@ input[type="email"]:focus {
   border-radius: 0;
   border-bottom: 1px solid var(--Bright-Blue);
 }
-
+/* extra form styling */
 .error {
   width: 100%;
   padding: 0;
@@ -214,12 +216,6 @@ input[type="email"]:focus {
   padding: 0.7rem;
 }
 .box-shadow-override {
-  background-color: var(--Bright-Blue);
-  color: var(--Light-Grayish-Blue);
-  font-size: 1rem;
-  font-family: var(--ff-other);
-  font-weight: var(--ff-weight-l);
-  border-radius: 3px;
   box-shadow: 0px 2px 2px var(--Very-Dark-Blue-lighter);
 }
 .btn1:hover {
@@ -292,7 +288,8 @@ header .section-1 {
   color: hsl(170, 50%, 63%);
 }
 .color-green-underscore:hover::after {
-  background: hsl(170, 50%, 63%);
+  fill: hsl(170, 50%, 63%);
+  background-blend-mode: hard-light;
 }
 .color-green-underscore::after {
   content: "";
