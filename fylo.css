@@ -359,9 +359,16 @@ footer {
 .ico-icons-cont svg {
   fill: white;
 }
-svg + svg {
+.social-links svg {
+  transition: var(--transition);
+}
+.social-links + .social-links {
   margin-left: 1rem;
 }
+.social-links svg:hover {
+  fill: var(--Bright-Blue);
+}
+
 .phone,
 .mail {
   position: relative;
@@ -387,6 +394,13 @@ svg + svg {
   position: absolute;
   left: -2.8rem;
   top: 0.3rem;
+}
+.primary-list-cont a:hover,
+.secondary-list-cont a:hover {
+  color: var(--Bright-Blue);
+}
+.ico-icons-cont svg {
+  color: var(--Desaturated-Blue);
 }
 
 @media screen and (min-width: 700px) {
@@ -436,7 +450,7 @@ svg + svg {
   main:before {
     background-image: url(images/bg-curve-desktop.svg);
   }
-  .section-1 {
+  svg .section-1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -507,13 +521,7 @@ svg + svg {
     margin: 0;
     justify-self: center;
   }
-  .primary-list-cont a:hover,
-  .secondary-list-cont a:hover {
-    color: var(--Bright-Blue);
-  }
-  .ico-icons-cont svg {
-    color: var(--Desaturated-Blue);
-  }
+
   .frontend-mentor {
     grid-column: 2 / 4;
     grid-row: 2;
