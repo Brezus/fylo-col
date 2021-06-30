@@ -99,9 +99,6 @@ select {
   margin: 0 auto;
 }
 
-.btn {
-  border: none;
-}
 .dp-inline {
   display: inline-block;
   max-width: 200px;
@@ -176,20 +173,43 @@ input[type="email"]:focus {
   border-radius: 0;
   border-bottom: 1px solid var(--Bright-Blue);
 }
+
 ::placeholder {
   opacity: var(--lowopacity);
+}
+/* button styling  */
+.btn {
+  border: none;
+  transition: var(--transition);
 }
 .blue-colo-btn {
   background-color: var(--Bright-Blue);
   color: var(--Light-Grayish-Blue);
   font-size: 0.8rem;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
   font-family: var(--ff-other);
   font-weight: var(--ff-weight-l);
   border-radius: 3px;
   box-shadow: 0px 4px 10px var(--Light-Gray);
   padding: 0.7rem;
 }
-
+.box-shadow-override {
+  background-color: var(--Bright-Blue);
+  color: var(--Light-Grayish-Blue);
+  font-size: 1rem;
+  font-family: var(--ff-other);
+  font-weight: var(--ff-weight-l);
+  border-radius: 3px;
+  box-shadow: 0px 2px 2px var(--Very-Dark-Blue-lighter);
+}
+.btn1:hover {
+  background-color: hsl(224, 95%, 65%);
+}
+.btn2:hover {
+  background-color: hsl(224, 95%, 70%);
+}
 /* main start  */
 main {
   padding-top: 3rem;
@@ -233,9 +253,26 @@ header .section-1 {
   display: inline-block;
   width: 11rem;
   text-align: center;
-  border-bottom: 2px solid var(--Moderate-Cyan);
+  position: relative;
 }
-
+/* green link styling */
+.color-green-underscore::before {
+  content: "";
+  background: var(--Moderate-Cyan);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 1px;
+}
+.color-green-underscore:hover::before {
+  background: hsl(170, 50%, 63%);
+}
+.color-green-underscore:hover {
+  color: hsl(170, 50%, 63%);
+}
+.color-green-underscore:hover::after {
+  background: hsl(170, 50%, 63%);
+}
 .color-green-underscore::after {
   content: "";
   background: url(images/icon-arrow.svg);
@@ -247,6 +284,7 @@ header .section-1 {
   height: 20px;
   width: 20px;
 }
+
 .review {
   margin: 1.5rem auto 3.5rem;
   padding: 2rem 2rem;
@@ -314,15 +352,7 @@ header .section-1 {
   margin-bottom: 1rem;
   box-shadow: none;
 }
-.box-shadow-override {
-  background-color: var(--Bright-Blue);
-  color: var(--Light-Grayish-Blue);
-  font-size: 1rem;
-  font-family: var(--ff-other);
-  font-weight: var(--ff-weight-l);
-  border-radius: 3px;
-  box-shadow: 0px 2px 2px var(--Very-Dark-Blue-lighter);
-}
+
 footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -359,15 +389,25 @@ footer {
 .ico-icons-cont svg {
   fill: white;
 }
-.social-links svg {
+
+.social-links svg:hover {
   transition: var(--transition);
+  animation: social 3s ease infinite;
+  fill: var(--Bright-Blue);
+}
+
+@keyframes social {
+  50% {
+    transform: translate(0, 8px);
+  }
 }
 .social-links + .social-links {
   margin-left: 1rem;
 }
-.social-links svg:hover {
+/* .social-links svg:hover {
   fill: var(--Bright-Blue);
-}
+  transform: scale(1.1) rotate(20deg);
+} */
 .phone,
 .mail {
   position: relative;
@@ -477,6 +517,7 @@ footer {
     max-width: 500px;
   }
   .section-2__form {
+    width: 50%;
     display: grid;
     grid-template-rows: 60px 60px;
     grid-template-columns: 1fr 2fr;
@@ -503,7 +544,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "fylo primary secondary icons";
     grid-template-rows: auto auto;
-    grid-row-gap: 3rem;
+    grid-gap: 3rem;
   }
   .fylo-contact {
     display: initial;
