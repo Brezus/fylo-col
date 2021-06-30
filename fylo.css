@@ -368,7 +368,6 @@ footer {
 .social-links svg:hover {
   fill: var(--Bright-Blue);
 }
-
 .phone,
 .mail {
   position: relative;
@@ -398,9 +397,6 @@ footer {
 .primary-list-cont a:hover,
 .secondary-list-cont a:hover {
   color: var(--Bright-Blue);
-}
-.ico-icons-cont svg {
-  color: var(--Desaturated-Blue);
 }
 
 @media screen and (min-width: 700px) {
@@ -450,7 +446,7 @@ footer {
   main:before {
     background-image: url(images/bg-curve-desktop.svg);
   }
-  svg .section-1 {
+  .section-1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -521,7 +517,6 @@ footer {
     margin: 0;
     justify-self: center;
   }
-
   .frontend-mentor {
     grid-column: 2 / 4;
     grid-row: 2;
