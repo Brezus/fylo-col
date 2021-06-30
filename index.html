@@ -60,8 +60,9 @@
             them wherever you need, share and collaborate with friends, family,
             and co-workers.
           </p>
-          <form class="header__form" action="#">
-            <input type="email" placeholder="Enter your email" maxlength="30" required/>
+          <form class="header__form" action="#" novalidate>
+            <input type="email" id="mail" name="mail" placeholder="Enter your email" maxlength="30" required/>
+            <span class="error" aria-live="polite"></span>
             <button class="btn blue-colo-btn btn1" type="submit">Get Started</button>
           </form>
         </div>
@@ -120,9 +121,10 @@
             would be happy to help you.
           </p>
         </div>
-        <form class="section-2__form" action="#">
-          <input type="email" placeholder="email@example.com" maxlength="30" required />
-          <button class="btn blue-colo-btn box-shadow-override btn2">Get Started For Free</button>
+        <form class="header__form section-2__form" action="#" novalidate>
+          <input type="email" id="mail" name="mail" placeholder="email@example.com" maxlength="30" required />
+          <span class="error" aria-live="polite"></span>
+          <button class="btn blue-colo-btn box-shadow-override btn2" type="submit">Get Started For Free</button>
         </form>
       </div>
       </section>
@@ -231,5 +233,41 @@
         </div>
       </div>
     </footer>
+    <!-- script for the form elements to display custom error message -->
+    <script>
+const form  = document.getElementsByTagName('form')[2];
+
+const email = document.getElementById('mail');
+const emailError = document.querySelector('#mail + span.error');
+
+email.addEventListener('input', function (event) {
+
+  if (email.validity.valid) {
+  } else {
+    showError();
+  }
+});
+
+form.addEventListener('submit', function (event) {
+
+  if(!email.validity.valid) {
+    showError();
+    event.preventDefault();
+  }
+});
+
+function showError() {
+  if(email.validity.valueMissing) {
+  
+    emailError.textContent = 'Please check your email';
+  } else if(email.validity.typeMismatch) {
+    emailError.textContent = 'Please check your email';
+  } else if(email.validity.tooShort) {
+    emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`;
+  }
+
+  emailError.className = 'error active';
+}
+    </script>
   </body>
 </html>
